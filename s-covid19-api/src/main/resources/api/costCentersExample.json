@@ -1,0 +1,41 @@
+{
+	"status": 0,
+	"costcenters": [
+		{
+			"id": 1,
+			"name": "xxx",
+			"businessUnitId": 123,
+			"active": true,
+			"reportingEntities": [
+				{
+					"id": 1,
+					"name": "xxx",
+					"active": true
+				},
+				{
+					"id": 2,
+					"name": "xxx",
+					"active": true
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "xxx",
+			"businessUnitId": 123,
+			"active": true,
+			"reportingEntities": [
+				{
+					"id": 1,
+					"name": "xxx",
+					"active": true
+				},
+				{
+					"id": 2,
+					"name": "xxx",
+					"active": true
+				}
+			]
+		}
+	]
+}

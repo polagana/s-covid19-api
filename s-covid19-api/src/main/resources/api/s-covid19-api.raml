@@ -1,0 +1,31 @@
+#%RAML 1.0
+#version: 1.0 Dev
+
+title: Biz Apps Empower API
+mediaType: application/json
+protocols: HTTPS
+documentation: 
+  - title: Description
+    content: |
+      System API for connecting to Empower
+  - title: Contact
+    content: |
+uses:
+  costcenterType: type_costcenter.raml
+traits:
+  clientcredentials: !include trait_clientsecret.raml 
+
+/costCenters:
+  is: [clientcredentials]
+  description: | 
+    costCenters resource
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            type:  costcenterType.costCenterResponse
+            example: !include costCentersExample.json
+    
+  
+          

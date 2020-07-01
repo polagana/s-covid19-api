@@ -1,0 +1,43 @@
+#%RAML 1.0 Library
+usage: | 
+  library to define cost center type
+types:
+  costCenterResponse:
+    type: object
+    properties:
+      status:
+        type: integer
+        description:  |
+          sucess will return 0, failure will return 1
+        enum:
+          - 0
+          - 1
+      costcenters:
+        type: costCenters
+        description:  |
+          will return list of cost centers
+  costCenters:
+    type: array
+    items:
+      costCenter
+  costCenter:
+    type: object
+    description: | 
+      Holds cost center details
+    properties:
+      id: integer
+      name: string
+      businessUnitId: integer
+      active: boolean
+      reportingEntities:
+        type: array
+        items:
+          ReportingEntities
+  ReportingEntities:
+    type: object
+    description: |
+      Holds reporting entity details
+    properties:
+      id: integer
+      name: string
+      active: boolean
